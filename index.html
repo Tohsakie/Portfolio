@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Hacquard Grégorie.">
+    <link rel="canonical" href= "https://www.gregoriehacquard.com/">
+    <meta name="author" content="Grégorie Hacquard">
+    <meta name="description" content="Portfolio de Grégorie Hacquard, altérnant ingénieur en développement logiciel à l'IMT Mines Alès. Vous y retrouverez mes projets personnel et professionnels.">
+    <title> Portfolio Grégorie </title>
+    <link rel="icon" type="image/x-icon" href="/images/ico.png">
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <!--    <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat" as="font" type="font/format" crossorigin>-->
+
+</head>
+<body>
+
+<div id="backMenu"></div>
+
+<div class="menu" >
+    <div id="menuButton">
+        <p id="textButton" onclick="visibilityMenu()" >☰</p>
+    </div>
+    <ul id="contentMenu">
+        <li><a href="#" onclick="visibilityMenu()">Accueil</a></li>
+        <li><a href="#first" onclick="visibilityMenu()">Qui suis-je ?</a></li>
+        <li><a href="#second" onclick="visibilityMenu()">Expériences</a></li>
+    </ul>
+</div>
+
+<div>
+
+    <video autoplay playsinline muted loop id="myVideo">
+        <source src="images/cloud3.mp4" type="video/mp4">
+    </video>
+
+
+    <h1 id="title" class="layers"> Ingénieur Alternant </h1>
+    <h2 id="littleTitle" class="layers"> Grégorie HACQUARD </h2>
+    <div>
+        <img src="images/mountain.webp" alt="mountain" id="mountain">
+    </div>
+
+
+    <div id="first">
+        <div id="whoIAm">
+            <div id="textFirstDiv">
+                <h2 id="titleFirst"> Qui suis-je ? </h2>
+                <p id="textFirst">Bonjour ! <br> Passionné d’informatique depuis tout petit,
+                    j’ai commencé en réalisant de petits projets répondant aux besoins de proches.
+                    Réalisation de bots sur Discord à la création d’un emploi du temps dynamique affichant les salles libres,
+                    le principal étant d’aider les autres et par la même occasion développer mes compétences.
+                    <br> Je suis quelqu’un de créatif, très curieux et toujours en soif de nouvelles connaissances !
+                    J’ai appris à travailler en équipe mais je peux tout à fait travailler en autonomie. <br>   </p>
+            </div>
+            <div id="imageMoiDiv">
+                <img src="images/moi.webp" width="960" height="959" alt="Photo de Grégorie" id="imageMoi">
+            </div>
+        </div>
+    </div>
+
+    <div id="second">
+        <div class="timeline">
+            <div class="timelineComponement">
+                <div class="timelineDate timelineDateRight"> <h2> Septembre 2021 </h2></div>
+            </div>
+            <div class="timelineMiddle">
+                <div class="timelinePoint"></div>
+            </div>
+            <div class="timelineComponement timelineComponementBg">
+                <h2 class="timelineTitle"> Ingénieur Alternant Développement chez One-ID </h2>
+                <p class="timelineParagraph">
+                    PHP, HTML, JavaScript, Smarty, MySQL <br>
+                    Réalisation de projets pour des clients, résolution de bug et amélioration du crm interne.
+                </p>
+            </div>
+            <div class="timelineComponement timelineComponementBg">
+                <h2 class="timelineTitle"> École d'ingénieur IMT Mines Alès </h2>
+                <p class="timelineParagraph">Projet en React.JS </p>
+            </div>
+            <div class="timelineMiddle">
+                <div class="timelinePoint"></div>
+            </div>
+            <div class="timelineComponement">
+                <div class="timelineDate timelineDateLeft"> <h2> Septembre 2021 </h2></div>
+            </div>
+
+            <div class="timelineComponement">
+                <div class="timelineDate timelineDateRight"> <h2> Avril 2021 </h2></div>
+            </div>
+            <div class="timelineMiddle">
+                <div class="timelinePoint"></div>
+            </div>
+            <div class="timelineComponement timelineComponementBg">
+                <h2 class="timelineTitle" title="Communauté de Commune du Massif du Vercors"> Stage technicien réseau CCMV</h2>
+                <p class="timelineParagraph">Assistances aux utilisateurs, configuration de machines / serveurs
+                    et réalisation d'une application pour l'import d'utilisateur dans la base de données. </p>
+            </div>
+            <div class="timelineComponement timelineComponementBg">
+                <h2 class="timelineTitle"> DUT Informatique (Grenoble) </h2>
+                <p class="timelineParagraph">Réalisation d'un projet en VUE.JS pour aider les
+                    commerçant locaux à vendre des produits pendant les confinements (Covivial) </p>
+            </div>
+            <div class="timelineMiddle">
+                <div class="timelinePoint"></div>
+            </div>
+            <div class="timelineComponement">
+                <div class="timelineDate timelineDateLeft"> <h2> Septembre 2019 </h2></div>
+            </div>
+
+            <div class="timelineComponement">
+                <div class="timelineDate timelineDateRight"> <h2> Septembre 2017 </h2></div>
+            </div>
+            <div class="timelineMiddle">
+                <div class="timelinePoint"></div>
+            </div>
+            <div class="timelineComponement timelineComponementBg">
+                <h2 class="timelineTitle" title="Science et technologie de l'industrie et du developement durable en système d'information numérique">
+                    BAC STI2D SIN mention Très bien</h2>
+                <p class="timelineParagraph"> Isla, robot présentant les journées portes ouvertes en python et c++.
+                    Deuxième place des olympiades accadémiques de Grenoble. </p>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<footer>
+    <div id="network">
+        <a href="https://www.linkedin.com/in/gregorie-hacquard/?originalSubdomain=fr">
+            <img src="images/linkedin.svg" width="512" height="512" alt="linkedin" id="linkedin">
+        </a>
+        <a href="https://github.com/Tohsakie">
+            <img src="images/github.svg" width="512" height="512" alt="github" id="github">
+        </a>
+    </div>
+    <p id="endText"> © HACQUARD Grégorie 2022 | <a href="mentions.html"> Mentions légales </a></p>
+</footer>
+
+
+<script src="index.js"></script>
+</body>
+</html>

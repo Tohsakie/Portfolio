@@ -1,0 +1,406 @@
+body {
+    font-family: 'Montserrat', 'sans-serif';
+    -webkit-background-size: cover;
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    animation: zoomIn 2s alternate;
+}
+
+html {
+    scroll-behavior: smooth;
+    padding:0; margin:0;
+}
+#mountain {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    margin: 5% 0 0 0;
+    padding: 0;
+    animation: fadeIn 2s;
+    vertical-align:middle;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.2));
+}
+
+
+
+
+#title {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    animation: zoomInImage 2s;
+    z-index: -1;
+    width: 100%;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.2));
+    /* text-shadow: 0 0 10px #000; */
+}
+
+#littleTitle {
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.2));
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: #fff;
+    text-align: center;
+    animation: fadeILittleTitle 2s forwards;
+    animation-delay: 2s;
+    opacity: 0;
+    z-index: -1;
+    padding: 0;
+    /* text-shadow: 0 0 10px #000; */
+}
+
+.number {
+    font: 800 40px system-ui;
+    font-size: 5em;
+    margin: 0;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 1.5em;
+    opacity: 80%;
+    text-align: center;
+    width: 100%;
+    display: table;
+}
+
+li {
+    display: inline-block;
+    float: none;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: cyan;
+}
+
+.menu {
+    text-align: center;
+    margin: 0 auto;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    z-index: 10;
+    animation: fadeIn 2s forwards;
+    animation-delay: 2.5s;
+    opacity: 0;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    width: 100%;
+}
+
+#menuButton {
+    display: none;
+}
+
+#first {
+    width: 100%;
+    background: linear-gradient(#000000, #222222);
+    color: #fff;
+    margin: 0;
+    border: none;
+
+
+}
+
+#whoIAm {
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#titleFirst {
+    font-size: 3em;
+}
+
+
+#textFirst {
+    text-align: justify;
+    font-size: 1.5em;
+    padding: 2.5% 2.5% 2.5% 5%;
+}
+
+#imageMoi {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: block;
+    border-radius: 2%;
+}
+
+#imageMoiDiv {
+    width: 500px;
+    margin: auto;
+}
+
+
+#textFirstDiv {
+    width: 60%;
+    margin: 0;
+    padding: 0;
+}
+
+#second {
+    padding-top: 2.5%;
+    width: 100%;
+    background-image: linear-gradient(125deg,#0F2027,#203A43,#2C5364);  background-size: 400%;
+    backdrop-filter: blur(4px);
+    animation: bganimation 15s infinite;
+    border: none;
+    vertical-align:middle;
+}
+
+#second p {
+    margin: 0;
+}
+
+.timeline {
+    margin: 0 auto;
+    max-width: 750px;
+    padding: 25px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+}
+
+.timelineComponement {
+    margin: 0 5% 5% 5%;
+}
+
+.timelineDateRight {
+    text-align: right;
+}
+
+.timelineDateLeft {
+    text-align: left;
+}
+
+
+.timelineMiddle {
+    position: relative;
+    background-color: white;
+}
+
+.timelinePoint {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.timelineComponementBg {
+    padding: 1.1em;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.timelineTitle {
+    margin: 0 0 0.5em 0;
+    font-size: 1.10em;
+}
+
+.timelineParagraph {
+    margin: 0;
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
+#network img {
+    width: 50px;
+    height: 50px;
+    padding: 2.5%;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.2));
+}
+
+#network a {
+    text-decoration: none;
+    width: 0;
+}
+
+#network {
+    text-align: center;
+}
+
+footer {
+    background-color: #363636 ;
+}
+
+#endText {
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 1%;
+}
+
+
+#endText > a {
+    color: #7f74f1;
+    text-decoration: none;
+}
+
+@media (max-width: 1250px) {
+    #title {
+        font-size: 2em;
+        animation: zoomTxtMobile 2s;
+    }
+    #littleTitle {
+        top: 38%;
+        font-size: 1.5em;
+        width: 100%;
+    }
+    #mountain {
+        margin: 110% 0 0 0;
+    }
+
+    #textFirstDiv {
+        width: 100%;
+    }
+
+    #textFirst {
+        font-size: 1.2em;
+    }
+
+
+    #contentMenu {
+        display: none;
+    }
+
+    #menuButton {
+        display: block;
+        right: 0;
+    }
+
+    #menuButton p {
+        margin: 5% 5% 5% 85%;
+        text-align: right;
+        font-size: 1.5em;
+        color: white;
+    }
+
+    #backMenu {
+        background-color: #363636;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 2;
+        display: none;
+    }
+
+    li {
+        float: none;
+        margin: 15%;
+    }
+
+
+
+}
+
+
+/* keyframes */
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeILittleTitle {
+    0% { opacity: 0; }
+    100% { opacity: 0.8; }
+}
+
+@keyframes moving {
+    from {top: 50%;}
+    to {top: 30%;}
+}
+
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(2, 2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes zoomInImage {
+    0% {
+        font-size: 8em;
+    }
+    100% {
+        font-size: 4em;
+    }
+}
+
+@keyframes zoomTxtMobile {
+    0% {
+        font-size: 3em;
+    }
+    100% {
+        font-size: 2em;
+    }
+}
+
+
+@keyframes shrink {
+    0% {
+        background-size: 110% 110%;
+    }
+    100% {
+        background-size: 100% 100%;
+    }
+}
+
+@keyframes bganimation {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
