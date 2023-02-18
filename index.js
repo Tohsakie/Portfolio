@@ -1,4 +1,11 @@
 var menuOpen = false;
+document.body.classList.add('no-scroll');
+
+window.onload = function() {
+    document.getElementById("loader").style.display = "none";
+    document.body.classList.add("loaded");
+    document.body.classList.remove('no-scroll');
+};
 
 function visibilityMenu(){
     if (window.matchMedia("(max-width: 1250px)").matches) {

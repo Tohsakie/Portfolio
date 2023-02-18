@@ -1,10 +1,36 @@
 body {
-    font-family: 'Montserrat', 'sans-serif';
+    font-family: 'Montserrat', sans-serif;
     -webkit-background-size: cover;
     background-size: 100% 100%;
     margin: 0;
     padding: 0;
 }
+
+#loader {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(125deg,#595959,#303030,#262626);  background-size: 400%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    color: white;
+    font-size: 4em;
+    animation: bganimation 3s infinite;
+}
+
+#loader p {
+    animation: fadeIn 2s;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
 
 #myVideo {
     position: fixed;
@@ -13,13 +39,13 @@ body {
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
-    animation: zoomIn 2s alternate;
 }
 
 html {
     scroll-behavior: smooth;
     padding:0; margin:0;
 }
+
 #mountain {
     position: relative;
     top: 0;
@@ -29,13 +55,9 @@ html {
     z-index: 1;
     margin: 5% 0 0 0;
     padding: 0;
-    animation: fadeIn 2s;
     vertical-align:middle;
     filter: drop-shadow(0 0 5px rgba(0,0,0,0.2));
 }
-
-
-
 
 #title {
     position: fixed;
@@ -46,7 +68,6 @@ html {
     color: #fff;
     text-align: center;
     font-weight: bold;
-    animation: zoomInImage 2s;
     z-index: -1;
     width: 100%;
     filter: drop-shadow(0 0 5px rgba(0,0,0,0.2));
@@ -62,13 +83,37 @@ html {
     font-size: 3em;
     color: #fff;
     text-align: center;
-    animation: fadeILittleTitle 2s forwards;
-    animation-delay: 2s;
     opacity: 0;
     z-index: -1;
     padding: 0;
     /* text-shadow: 0 0 10px #000; */
 }
+
+
+/* Animations after load */
+.loaded #myVideo {
+    animation: zoomIn 2s alternate;
+}
+
+.loaded #mountain {
+    animation: fadeIn 2s;
+}
+
+.loaded #title {
+    animation: zoomInImage 2s;
+}
+
+.loaded #littleTitle {
+    animation: fadeILittleTitle 2s forwards;
+    animation-delay: 2s;
+}
+
+.loaded .menu {
+    animation: fadeIn 2s forwards;
+    animation-delay: 2.5s;
+}
+
+/* end */
 
 .number {
     font: 800 40px system-ui;
@@ -117,8 +162,6 @@ li a:hover {
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     z-index: 10;
-    animation: fadeIn 2s forwards;
-    animation-delay: 2.5s;
     opacity: 0;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -283,8 +326,12 @@ footer {
 @media (max-width: 1250px) {
     #title {
         font-size: 2em;
+    }
+
+    .loaded #title {
         animation: zoomTxtMobile 2s;
     }
+
     #littleTitle {
         top: 38%;
         font-size: 1.5em;
