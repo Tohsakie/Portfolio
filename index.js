@@ -7,6 +7,24 @@ window.onload = function() {
     document.body.classList.remove('no-scroll');
 };
 
+videoOnIos();
+
+function videoOnIos(){
+    var isSafariiOS = /iP(ad|hone|od).+Version\/[\d\.]+.*Safari/i.test(navigator.userAgent);
+    var videoSrc;
+
+    if (isSafariiOS) {
+        videoSrc = 'images/cloud.mp4';
+    } else {
+        videoSrc = 'images/cloud.webm';
+    }
+
+    var video = document.getElementById('myVideo');
+    var source = video.getElementsByTagName('source')[0];
+    source.setAttribute('src', videoSrc);
+    video.load();
+}
+
 function visibilityMenu(){
     if (window.matchMedia("(max-width: 1250px)").matches) {
         if(menuOpen){
